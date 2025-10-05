@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Best Med Aesthetique - Smart Skincare for Every Skin Story</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="Brancy - Cosmetic & Beauty Salon Website Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords"
+        content="bootstrap, ecommerce, ecommerce html, beauty, cosmetic shop, beauty products, cosmetic, beauty shop, cosmetic store, shop, beauty store, spa, cosmetic, cosmetics, beauty salon" />
+    <meta name="author" content="codecarnival" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.webp">
+
+    <!-- CSS (Font, Vendor, Icon, Plugins & Style CSS files) -->
+
+    <!-- Font CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS (Bootstrap & Icon Font) -->
+    <link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css">
+
+    <!-- Plugins CSS (All Plugins Files) -->
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/fancybox.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+
+    <!-- Custom Video Background Styles -->
+    <style>
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            border-radius: 0px;
+        }
+
+        .hero-two-slide-item {
+            background-color: transparent !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-two-slider-area {
+            overflow: hidden;
+            border-radius: 0px;
+        }
+
+        /* Ensure content is visible over video */
+        .hero-two-slide-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Mobile video styles */
+        .hero-video-mobile {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            border-radius: 0px;
+            display: none;
+        }
+
+        /* Show mobile video on mobile devices */
+        @media (max-width: 968px) {
+            .hero-video-bg:not(.hero-video-mobile) {
+                display: none;
+            }
+
+            .hero-video-mobile {
+                display: block;
+            }
+        }
+
+        /* Contact section responsive padding */
+        @media (max-width: 768px) {
+            .container[style*="padding-left: 2rem"] {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container[style*="padding-left: 2rem"] {
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 28px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+            color: white;
+            text-decoration: none;
+        }
+
+        .whatsapp-float i {
+            margin-top: 2px;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+        }
+
+        /* Responsive WhatsApp button */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+        }
+
+        /* Optional: Add overlay for better text readability */
+        /* .hero-two-slide-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            border-radius: 0px;
+        } */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .brand-story-section {
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #fdf8f3 0%, #fff 50%, #f5f0eb 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .story-header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .story-subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #c9a574;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .story-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+        }
+
+        .story-tagline {
+            font-size: 20px;
+            color: #666;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .story-text {
+            opacity: 0;
+            animation: fadeInLeft 1s ease 0.6s forwards;
+        }
+
+        .story-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .story-text p:first-of-type {
+            font-size: 18px;
+            font-weight: 500;
+            color: #2c2c2c;
+        }
+
+        .story-image {
+            position: relative;
+            opacity: 0;
+            animation: fadeInRight 1s ease 0.6s forwards;
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #c9a574 0%, #d4b895 100%);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .values-section {
+            margin-top: 80px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .value-card:nth-child(1) {
+            animation-delay: 0.8s;
+        }
+
+        .value-card:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .value-card:nth-child(3) {
+            animation-delay: 1.2s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #c9a574 0%, #d4b895 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 32px;
+        }
+
+        .value-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 15px;
+        }
+
+        .value-desc {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .journey-timeline {
+            margin-top: 80px;
+            padding: 60px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 50px;
+        }
+
+        .timeline-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            padding-left: 40px;
+            border-left: 3px solid #c9a574;
+            margin-bottom: 40px;
+            position: relative;
+            opacity: 0;
+            animation: fadeInLeft 0.8s ease forwards;
+        }
+
+        .timeline-item:nth-child(1) {
+            animation-delay: 1.4s;
+        }
+
+        .timeline-item:nth-child(2) {
+            animation-delay: 1.6s;
+        }
+
+        .timeline-item:nth-child(3) {
+            animation-delay: 1.8s;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background: #c9a574;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #c9a574;
+        }
+
+        .timeline-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 80px;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
+            border-radius: 20px;
+            color: white;
+        }
+
+        .cta-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #c9a574;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #d4b895;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(201, 165, 116, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .story-title {
+                font-size: 32px;
+            }
+
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-timeline {
+                padding: 40px 20px;
+            }
+
+            .timeline-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--== Wrapper Start ==-->
+    <div class="wrapper">
+
+        <!--== Start Header Wrapper ==-->
+        <header class="header-area sticky-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-5 col-sm-6 col-lg-5">
+                        <div class="header-logo">
+                            <a href="index.html">
+                                <img class="logo-main" src="assets/bm-logo.png" style="width: 10vh;" alt="Logo" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="header-navigation">
+                            <ul class="main-nav justify-content-end">
+                                <li class="has-submenu"><a href="index.html">home</a>
+
+                                </li>
+                                <li><a href="#about2">about</a></li>
+                                <li><a href="#products2">shop</a>
+
+                                </li>
+                                <!-- <li class="has-submenu"><a href="blog.html">Blog</a>
+
+                                </li> -->
+
+                                <li><a href="#contact2">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!--== End Header Wrapper ==-->
+
+        <main class="main-content">
+            <!--== Start Hero Area Wrapper ==-->
+            <section class="hero-two-slider-area position-relative">
+                <!-- Video Background -->
+                <video class="hero-video-bg" autoplay muted loop playsinline>
+                    <source src="assets/Video/herodesktop.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Mobile Video Background -->
+                <video class="hero-video-bg hero-video-mobile" autoplay muted loop playsinline>
+                    <source src="assets/Video/heromobile.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="swiper hero-two-slider-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide hero-two-slide-item">
+                            <div class="container">
+                                <div class="row align-items-center position-relative">
+                                    <div class="col-12 col-md-6">
+                                        <div class="hero-two-slide-content">
+                                            <div class="hero-two-slide-text-img"><img
+                                                    src="assets/images/slider/text-light.webp" width="427" height="232"
+                                                    alt="Image"></div>
+                                            <h2 class="hero-two-slide-title" style="color: white; font-size: 50px;">
+                                                SMART SKINCARE FOR EVERY SKIN STORY</h2>
+                                            <p class="hero-two-slide-desc" style="color: white;">Advanced anti-aging
+                                                treatments designed to restore your skin's natural radiance and youthful
+                                                vitality through cutting-edge medical aesthetics.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide hero-two-slide-item">
+                            <div class="container">
+                                <div class="row align-items-center position-relative">
+                                    <div class="col-12 col-md-6">
+                                        <div class="hero-two-slide-content">
+                                            <div class="hero-two-slide-text-img"><img
+                                                    src="assets/images/slider/text-light.webp" width="427" height="232"
+                                                    alt="Image"></div>
+                                            <h2 class="hero-two-slide-title" style="color: white; font-size: 50px;">
+                                                SMART SKINCARE FOR EVERY SKIN STORY</h2>
+                                            <p class="hero-two-slide-desc" style="color: white;">Experience the power of
+                                                clean, fresh skincare
+                                                with our premium medical-grade treatments for healthy, glowing skin.</p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--== Add Pagination ==-->
+                    <div class="hero-two-slider-pagination"></div>
+                </div>
+            </section>
+            <!--== End Hero Area Wrapper ==-->
+
+            <!--== Start Product Banner Area Wrapper ==-->
+            <!-- <section class="section-space">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4">
+                           
+                            <a href="product.html" class="product-banner-item">
+                                <img src="assets/images/shop/banner/4.webp" width="370" height="370"
+                                    alt="Image-HasTech">
+                            </a>
+                            
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mt-sm-0 mt-6">
+                            
+                            <a href="product.html" class="product-banner-item">
+                                <img src="assets/images/shop/banner/5.webp" width="370" height="370"
+                                    alt="Image-HasTech">
+                            </a>
+                          
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mt-lg-0 mt-6">
+                           
+                            <a href="product.html" class="product-banner-item">
+                                <img src="assets/images/shop/banner/6.webp" width="370" height="370"
+                                    alt="Image-HasTech">
+                            </a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <!--== End Product Banner Area Wrapper ==-->
+
+
+            <!--== Start Page Header Area Wrapper ==-->
+            <section class="brand-story-section" id="about2">
+                <div class="container">
+                    <!-- Header -->
+                    <div class="story-header">
+                        <div class="story-subtitle">Our Brand Story</div>
+                        <h1 class="story-title">Where Science Meets Care</h1>
+                        <p class="story-tagline">Every great journey begins with a single step — ours began with a
+                            simple yet powerful belief</p>
+                    </div>
+
+                    <!-- Story Content -->
+                    <div class="story-content">
+                        <div class="story-text">
+                            <p>Skincare should be effective, uncomplicated, and trustworthy.</p>
+                            <p>We set out to create products that are more than just part of a routine — they're daily
+                                companions in your journey to healthy, radiant skin. Each formula is carefully designed
+                                to protect, repair, and restore balance, blending science with care to deliver results
+                                you can see and feel.</p>
+                            <p>For us, skincare is not about overwhelming shelves or confusing routines. It's about
+                                honest solutions that deliver real results. That's why we've invested time, research,
+                                and care into developing products that are safe, dermatologically tested, and designed
+                                to suit diverse skin types.</p>
+                        </div>
+                        <div class="story-image">
+                            <img src="images/about.jpg" alt="Best Med Aesthetique Story">
+                        </div>
+                    </div>
+
+                    <!-- Values Section -->
+                    <!-- <div class="values-section">
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <div class="value-icon">🔬</div>
+                                <h3 class="value-title">Science-Backed</h3>
+                                <p class="value-desc">Every formula is developed with rigorous research and clinical
+                                    testing to ensure safety and efficacy</p>
+                            </div>
+                            <div class="value-card">
+                                <div class="value-icon">✨</div>
+                                <h3 class="value-title">Minimal & Effective</h3>
+                                <p class="value-desc">No overwhelming routines. Just honest, straightforward solutions
+                                    that deliver visible results</p>
+                            </div>
+                            <div class="value-card">
+                                <div class="value-icon">🤝</div>
+                                <h3 class="value-title">Trustworthy</h3>
+                                <p class="value-desc">Dermatologically tested products designed for diverse skin types
+                                    you can rely on</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Journey Timeline -->
+                    <!-- <div class="journey-timeline">
+                <h2 class="timeline-title">Our Journey Forward</h2>
+                <div class="timeline-content">
+                    <div class="timeline-item">
+                        <h3>The Beginning</h3>
+                        <p>Started with a vision to simplify skincare while delivering professional-grade results. Our first products were born from the belief that everyone deserves access to effective, science-backed skincare.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Innovation Pipeline</h3>
+                        <p>This is only the beginning. With more innovations already in the pipeline, we're committed to expanding our range while staying true to our core philosophy.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Our Commitment</h3>
+                        <p>We're here to deliver effective, minimal, science-backed skincare that you can trust. Your skin deserves the best — and we're here to deliver it, one product at a time.</p>
+                    </div>
+                </div>
+            </div> -->
+
+                    <!-- CTA Section -->
+                    <!-- <div class="cta-section">
+                <h2 class="cta-title">Ready to Transform Your Skincare Routine?</h2>
+                <p class="cta-text">Discover products that work with your skin, not against it</p>
+                <a href="#products" class="cta-button">Explore Our Products</a>
+            </div> -->
+                </div>
+            </section>
+            <!--== End Page Header Area Wrapper ==-->
+
+            <!--== Start Product Area Wrapper ==-->
+
+            <!--== Start Product Area Wrapper ==-->
+            <section class="section-space" id="products2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-title text-center">
+                                <h2 class="title">Our Premium Skincare Range</h2>
+                                <p>Discover our carefully crafted skincare solutions designed for every skin type</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-n4 mb-sm-n10 g-3 g-sm-6">
+                        <!-- Product 1: Golden Glow MS Sunscreen -->
+                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a class="d-block" href="product-details-golden-glow-ms.html">
+                                        <img src="images/GLMSSS/1x1 ms copy_033_V1.jpg" width="370" height="450"
+                                            alt="Golden Glow MS Sunscreen">
+                                    </a>
+                                    <span class="flag-new">new</span>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-rating">
+                                        <div class="rating">
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </div>
+                                        <div class="reviews">150 reviews</div>
+                                    </div>
+                                    <h4 class="title"><a href="product-details-golden-glow-ms.html">Golden Glow MS
+                                            Sunscreen</a></h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2: Golden Glow CL Sunscreen -->
+                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a class="d-block" href="product-details-golden-glow-cl.html">
+                                        <img src="images/GLCLSS/1x1 ms copy_033_V3.jpg" width="370" height="450"
+                                            alt="Golden Glow CL Sunscreen">
+                                    </a>
+                                    <span class="flag-new">new</span>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-rating">
+                                        <div class="rating">
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </div>
+                                        <div class="reviews">150 reviews</div>
+                                    </div>
+                                    <h4 class="title"><a href="product-details-golden-glow-cl.html">Golden Glow CL
+                                            Sunscreen</a></h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3: Hydraluxé Serum -->
+                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a class="d-block" href="product-details-hydraluxe.html">
+                                        <img src="images/Hydraluxé Serum/1_1_BM_V1.jpg" width="370" height="450"
+                                            alt="Hydraluxé Serum">
+                                    </a>
+                                    <span class="flag-new">new</span>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-rating">
+                                        <div class="rating">
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </div>
+                                        <div class="reviews">150 reviews</div>
+                                    </div>
+                                    <h4 class="title"><a href="product-details-hydraluxe.html">Hydraluxé Serum</a></h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4: Hyaluronic Boost Serum -->
+                        <div class="col-6 col-lg-4 mb-4 mb-sm-9">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a class="d-block" href="product-details-hyaluronic.html">
+                                        <img src="images/Hyaluronic Boost Serum/1x1_V1.jpg" width="370" height="450"
+                                            alt="Hyaluronic Boost Serum">
+                                    </a>
+                                    <span class="flag-new">new</span>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-rating">
+                                        <div class="rating">
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </div>
+                                        <div class="reviews">150 reviews</div>
+                                    </div>
+                                    <h4 class="title"><a href="product-details-hyaluronic.html">Hyaluronic Boost
+                                            Serum</a></h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!--== End Product Area Wrapper ==-->
+
+            <!--== Start Product Banner Area Wrapper ==-->
+            <!-- <section class="section-space pt-0">
+                <div class="container">
+                
+                    <a href="product.html" class="product-banner-item">
+                        <img src="assets/images/shop/banner/7.webp" width="1170" height="240" alt="Image-HasTech">
+                    </a>
+                   
+                </div>
+            </section> -->
+            <!--== End Product Banner Area Wrapper ==-->
+
+
+
+
+
+
+
+            <!--== Start News Letter Area Wrapper ==-->
+            <section class="section-space pt-0" id="contact2">
+                <div class="container">
+                    <div class="newsletter-content-wrap" data-bg-img="assets/images/photos/bg1.webp">
+                        <div class="newsletter-content">
+                            <div class="section-title mb-0">
+                                <h2 class="title">Join with us</h2>
+                                <p>Stay updated with our latest skincare tips, exclusive offers, and new treatment
+                                    announcements.</p>
+                            </div>
+                        </div>
+                        <div class="newsletter-form">
+                            <form>
+                                <input type="email" class="form-control" placeholder="enter your email">
+                                <button class="btn-submit" type="submit"><i class="fa fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--== End News Letter Area Wrapper ==-->
+            <section class="section-space" id="contact"
+                style="background: linear-gradient(135deg, #f8f9fa 0%, #fff5f7 100%); position: relative; overflow: hidden;">
+                <!-- Decorative Background Elements -->
+                <div
+                    style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,182,193,0.15) 0%, transparent 70%); border-radius: 50%;">
+                </div>
+                <div
+                    style="position: absolute; bottom: -80px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,218,224,0.2) 0%, transparent 70%); border-radius: 50%;">
+                </div>
+
+                <div class="container" style="position: relative; z-index: 1;">
+                    <!-- Section Title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-title text-center mb-5">
+                                <h2 class="title"
+                                    style="font-size: 2.5rem; font-weight: 700; color: #2c3e50; margin-bottom: 1rem;">
+                                    Get In Touch</h2>
+                                <p style="font-size: 1.1rem; color: #6c757d; max-width: 600px; margin: 0 auto;">We'd
+                                    love to hear from you! Reach out for consultations, inquiries, or feedback about our
+                                    skincare solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 align-items-stretch">
+                        <!-- Contact Form -->
+                        <div class="col-lg-6">
+                            <div
+                                style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); height: 100%; border: 1px solid rgba(255,182,193,0.2);">
+                                <h3
+                                    style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin-bottom: 1.5rem; display: flex; align-items: center;">
+                                    <span
+                                        style="display: inline-block; width: 40px; height: 40px; background: linear-gradient(135deg, #ff6b9d 0%, #ffa8c5 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                        <i class="fa fa-envelope" style="color: white; font-size: 18px;"></i>
+                                    </span>
+                                    Send Us a Message
+                                </h3>
+                                <form class="contact-form">
+                                    <div class="mb-4">
+                                        <label
+                                            style="display: block; margin-bottom: 8px; color: #495057; font-weight: 500; font-size: 0.95rem;">Your
+                                            Name *</label>
+                                        <input type="text" class="form-control" placeholder="Enter your full name"
+                                            required
+                                            style="padding: 14px 18px; border: 2px solid #e9ecef; border-radius: 12px; font-size: 1rem; transition: all 0.3s ease;"
+                                            onfocus="this.style.borderColor='#ff6b9d'; this.style.boxShadow='0 0 0 3px rgba(255,107,157,0.1)'"
+                                            onblur="this.style.borderColor='#e9ecef'; this.style.boxShadow='none'">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label
+                                            style="display: block; margin-bottom: 8px; color: #495057; font-weight: 500; font-size: 0.95rem;">Email
+                                            Address *</label>
+                                        <input type="email" class="form-control" placeholder="your.email@example.com"
+                                            required
+                                            style="padding: 14px 18px; border: 2px solid #e9ecef; border-radius: 12px; font-size: 1rem; transition: all 0.3s ease;"
+                                            onfocus="this.style.borderColor='#ff6b9d'; this.style.boxShadow='0 0 0 3px rgba(255,107,157,0.1)'"
+                                            onblur="this.style.borderColor='#e9ecef'; this.style.boxShadow='none'">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label
+                                            style="display: block; margin-bottom: 8px; color: #495057; font-weight: 500; font-size: 0.95rem;">Phone
+                                            Number</label>
+                                        <input type="tel" class="form-control" placeholder="+91 98765 43210"
+                                            style="padding: 14px 18px; border: 2px solid #e9ecef; border-radius: 12px; font-size: 1rem; transition: all 0.3s ease;"
+                                            onfocus="this.style.borderColor='#ff6b9d'; this.style.boxShadow='0 0 0 3px rgba(255,107,157,0.1)'"
+                                            onblur="this.style.borderColor='#e9ecef'; this.style.boxShadow='none'">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label
+                                            style="display: block; margin-bottom: 8px; color: #495057; font-weight: 500; font-size: 0.95rem;">Your
+                                            Message *</label>
+                                        <textarea class="form-control" rows="5"
+                                            placeholder="Tell us how we can help you..." required
+                                            style="padding: 14px 18px; border: 2px solid #e9ecef; border-radius: 12px; font-size: 1rem; resize: vertical; transition: all 0.3s ease;"
+                                            onfocus="this.style.borderColor='#ff6b9d'; this.style.boxShadow='0 0 0 3px rgba(255,107,157,0.1)'"
+                                            onblur="this.style.borderColor='#e9ecef'; this.style.boxShadow='none'"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn w-100"
+                                        style="background: linear-gradient(135deg, #ff6b9d 0%, #ffa8c5 100%); color: white; padding: 16px; border: none; border-radius: 12px; font-size: 1.05rem; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255,107,157,0.3);"
+                                        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255,107,157,0.4)'"
+                                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(255,107,157,0.3)'">
+                                        <i class="fa fa-paper-plane" style="margin-right: 8px;"></i>Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Contact Details -->
+                        <div class="col-lg-6">
+                            <div style="height: 100%; display: flex; flex-direction: column; gap: 1.5rem;">
+                                <!-- Contact Info Cards -->
+                                <div
+                                    style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(255,182,193,0.2);">
+                                    <h3
+                                        style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin-bottom: 1.5rem; display: flex; align-items: center;">
+                                        <span
+                                            style="display: inline-block; width: 40px; height: 40px; background: linear-gradient(135deg, #ff6b9d 0%, #ffa8c5 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                            <i class="fa fa-map-marker" style="color: white; font-size: 20px;"></i>
+                                        </span>
+                                        Contact Information
+                                    </h3>
+
+                                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                                        <!-- Address -->
+                                        <div style="display: flex; align-items: start; padding: 1rem; background: #f8f9fa; border-radius: 12px; transition: all 0.3s ease;"
+                                            onmouseover="this.style.background='#fff5f7'; this.style.transform='translateX(5px)'"
+                                            onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)'">
+                                            <div
+                                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                <i class="fa fa-map-marker" style="color: white; font-size: 20px;"></i>
+                                            </div>
+                                            <div style="margin-left: 15px;">
+                                                <h5
+                                                    style="font-size: 0.9rem; font-weight: 600; color: #6c757d; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                                    Address</h5>
+                                                <p
+                                                    style="margin: 0; color: #2c3e50; font-size: 1rem; line-height: 1.6;">
+                                                    BEST MED AESTHETIQUE PVT LTD<br>
+                                                    2nd floor, No-16,Alex Square,
+                                                    Opposite to Amirtha School, Ettimadai,
+                                                    Coimbatore, Tamil Nadu
+                                                    PIN - 641112</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div style="display: flex; align-items: start; padding: 1rem; background: #f8f9fa; border-radius: 12px; transition: all 0.3s ease;"
+                                            onmouseover="this.style.background='#fff5f7'; this.style.transform='translateX(5px)'"
+                                            onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)'">
+                                            <div
+                                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                <i class="fa fa-envelope" style="color: white; font-size: 18px;"></i>
+                                            </div>
+                                            <div style="margin-left: 15px;">
+                                                <h5
+                                                    style="font-size: 0.9rem; font-weight: 600; color: #6c757d; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                                    Email</h5>
+                                                <a href="mailto:bmaesthetique@gmail.com "
+                                                    style="margin: 0; color: #ff6b9d; font-size: 1rem; text-decoration: none; font-weight: 500;">bmaesthetique@gmail.com
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Phone -->
+                                        <div style="display: flex; align-items: start; padding: 1rem; background: #f8f9fa; border-radius: 12px; transition: all 0.3s ease;"
+                                            onmouseover="this.style.background='#fff5f7'; this.style.transform='translateX(5px)'"
+                                            onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)'">
+                                            <div
+                                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                <i class="fa fa-phone" style="color: white; font-size: 18px;"></i>
+                                            </div>
+                                            <div style="margin-left: 15px;">
+                                                <h5
+                                                    style="font-size: 0.9rem; font-weight: 600; color: #6c757d; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                                    Phone</h5>
+                                                <a href="tel:+918137011855"
+                                                    style="margin: 0; color: #2c3e50; font-size: 1rem; text-decoration: none; font-weight: 500;">+91
+                                                    81370 11855
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Business Hours -->
+                                        <div style="display: flex; align-items: start; padding: 1rem; background: #f8f9fa; border-radius: 12px; transition: all 0.3s ease;"
+                                            onmouseover="this.style.background='#fff5f7'; this.style.transform='translateX(5px)'"
+                                            onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)'">
+                                            <div
+                                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                <i class="fa fa-clock-o" style="color: white; font-size: 18px;"></i>
+                                            </div>
+                                            <div style="margin-left: 15px;">
+                                                <h5
+                                                    style="font-size: 0.9rem; font-weight: 600; color: #6c757d; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                                    Business Hours</h5>
+                                                <p
+                                                    style="margin: 0; color: #2c3e50; font-size: 1rem; line-height: 1.6;">
+                                                    Mon - Sat: 10:00 AM - 5:00 PM<br>Sundays: Closed</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Social Media -->
+                                    <div
+                                        style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #f0f0f0;">
+                                        <h5
+                                            style="font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
+                                            Follow Us</h5>
+                                        <div style="display: flex; gap: 12px;">
+                                            <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #3b5998 0%, #5875b5 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; text-decoration: none;"
+                                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(59,89,152,0.4)'"
+                                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                                <i class="fa fa-facebook" style="color: white; font-size: 20px;"></i>
+                                            </a>
+                                            <a href="https://www.instagram.com/bmaesthetique?igsh=MWFyY3R2cWpnN3J3Nw==" target="_blank" rel="noopener"
+                                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; text-decoration: none;"
+                                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(225,48,108,0.4)'"
+                                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                                <i class="fa fa-instagram" style="color: white; font-size: 20px;"></i>
+                                            </a>
+                                            <a href="https://twitter.com/" target="_blank" rel="noopener"
+                                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; text-decoration: none;"
+                                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(29,161,242,0.4)'"
+                                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                                <i class="fa fa-twitter" style="color: white; font-size: 20px;"></i>
+                                            </a>
+                                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+                                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; text-decoration: none;"
+                                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(0,119,181,0.4)'"
+                                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                                <i class="fa fa-linkedin" style="color: white; font-size: 20px;"></i>
+                                            </a>
+                                            <a href="https://wa.me/919876543210" target="_blank" rel="noopener"
+                                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; text-decoration: none;"
+                                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(37,211,102,0.4)'"
+                                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                                <i class="fa fa-whatsapp" style="color: white; font-size: 20px;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optional: Map Section (Full Width Below) -->
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(255,182,193,0.2);">
+                                <h3
+                                    style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1.5rem; text-align: center;">
+                                    <i class="fa fa-map-marker" style="color: #ff6b9d; margin-right: 8px;"></i>
+                                    Find Us On Map
+                                </h3>
+                                <div style="border-radius: 15px; overflow: hidden;">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.486331112045!2d76.29988431533459!3d10.015860875354056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d446aaf2a7d%3A0x2c0b07a9ec96a2e4!2sKochi!5e0!3m2!1sen!2sin!4v1694441234567"
+                                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+    </div>
+
+    </main>
+
+    <!--== Start Footer Area Wrapper ==-->
+    <footer class="footer-area">
+        <!--== Start Footer Main ==-->
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="widget-item">
+                            <div class="widget-about">
+                                <a class="widget-logo" href="index.html">
+                                    <img src="assets/bm-logo.png" style="width: 20vh;" alt="Logo">
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 mt-md-0 mt-9">
+                        <div class="widget-item">
+                            <h4 class="widget-title">Quick Actions</h4>
+                            <ul class="widget-nav">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#about2">About us</a></li>
+                                <li><a href="#products2">Shop</a></li>
+                                <li><a href="#contact2">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mt-lg-0 mt-6">
+                        <div class="widget-item">
+                            <h4 class="widget-title">Social Info</h4>
+                            <div class="widget-social">
+                                <a href="https://twitter.com/" target="_blank" rel="noopener"><i
+                                        class="fa fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="https://www.pinterest.com/" target="_blank" rel="noopener"><i
+                                        class="fa fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--== End Footer Main ==-->
+
+        <!--== Start Footer Bottom ==-->
+        <div class="footer-bottom">
+            <div class="container pt-0 pb-0">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 Best Med Aesthetique. Designed By <a
+                            href="https://zenorix.in">Zenorix</a></p>
+                </div>
+            </div>
+        </div>
+        <!--== End Footer Bottom ==-->
+    </footer>
+    <!--== End Footer Area Wrapper ==-->
+
+    <!--== Scroll Top Button ==-->
+    <div id="scroll-to-top" class="scroll-to-top"><span class="fa fa-angle-up"></span></div>
+
+    <!--== Start Product Quick Wishlist Modal ==-->
+    <aside class="product-action-modal modal fade" id="action-WishlistModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="product-action-view-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <div class="modal-action-messages">
+                            <i class="fa fa-check-square-o"></i> Added to wishlist successfully!
+                        </div>
+                        <div class="modal-action-product">
+                            <div class="thumb">
+                                <img src="assets/images/shop/modal1.webp" alt="Organic Food Juice" width="466"
+                                    height="320">
+                            </div>
+                            <h4 class="product-name"><a href="product-details.html">Readable content DX22</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--== End Product Quick Wishlist Modal ==-->
+
+    <!--== Start Product Quick Add Cart Modal ==-->
+    <aside class="product-action-modal modal fade" id="action-CartAddModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="product-action-view-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <div class="modal-action-messages">
+                            <i class="fa fa-check-square-o"></i> Added to cart successfully!
+                        </div>
+                        <div class="modal-action-product">
+                            <div class="thumb">
+                                <img src="assets/images/shop/modal1.webp" alt="Organic Food Juice" width="466"
+                                    height="320">
+                            </div>
+                            <h4 class="product-name"><a href="product-details.html">Readable content DX22</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--== End Product Quick Add Cart Modal ==-->
+
+    <!--== Start Aside Search Form ==-->
+    <aside class="aside-search-box-wrapper offcanvas offcanvas-top" tabindex="-1" id="AsideOffcanvasSearch"
+        aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+            <h5 class="d-none" id="offcanvasTopLabel">Aside Search</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                    class="fa fa-close"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container pt--0 pb--0">
+                <div class="search-box-form-wrap">
+                    <div class="search-note">
+                        <p>Start typing and press Enter to search</p>
+                    </div>
+                    <form action="#" method="post">
+                        <div class="aside-search-form position-relative">
+                            <label for="SearchInput" class="visually-hidden">Search</label>
+                            <input id="SearchInput" type="search" class="form-control"
+                                placeholder="Search entire store…">
+                            <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--== End Aside Search Form ==-->
+
+    <!--== Start Product Quick View Modal ==-->
+    <aside class="product-cart-view-modal modal fade" id="action-QuickViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="product-quick-view-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <span class="fa fa-close"></span>
+                        </button>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <!--== Start Product Thumbnail Area ==-->
+                                    <div class="product-single-thumb">
+                                        <img src="assets/images/shop/quick-view1.webp" width="544" height="560"
+                                            alt="Image-HasTech">
+                                    </div>
+                                    <!--== End Product Thumbnail Area ==-->
+                                </div>
+                                <div class="col-lg-6">
+                                    <!--== Start Product Info Area ==-->
+                                    <div class="product-details-content">
+                                        <h5 class="product-details-collection">Premioum collection</h5>
+                                        <h3 class="product-details-title">Offbline Instant Age Rewind Eraser.</h3>
+                                        <div class="product-details-review mb-5">
+                                            <div class="product-review-icon">
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                            <button type="button" class="product-review-show">150 reviews</button>
+                                        </div>
+                                        <p class="mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                            Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident
+                                            alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut
+                                            veniam sequi amet consectetur.</p>
+                                        <div class="product-details-pro-qty">
+                                            <div class="pro-qty">
+                                                <input type="text" title="Quantity" value="01">
+                                            </div>
+                                        </div>
+                                        <div class="product-details-action">
+                                            <h4 class="price">$254.22</h4>
+                                            <div class="product-details-cart-wishlist">
+                                                <button type="button" class="btn" data-bs-toggle="modal"
+                                                    data-bs-target="#action-CartAddModal">Add to cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--== End Product Info Area ==-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--== End Product Quick View Modal ==-->
+
+    <!--== Start Aside Cart ==-->
+    <aside class="aside-cart-wrapper offcanvas offcanvas-end" tabindex="-1" id="AsideOffcanvasCart"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h1 class="d-none" id="offcanvasRightLabel">Shopping Cart</h1>
+            <button class="btn-aside-cart-close" data-bs-dismiss="offcanvas" aria-label="Close">Shopping Cart <i
+                    class="fa fa-chevron-right"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="aside-cart-product-list">
+                <li class="aside-product-list-item">
+                    <a href="#/" class="remove">×</a>
+                    <a href="product-details.html">
+                        <img src="assets/images/shop/cart1.webp" width="68" height="84" alt="Image">
+                        <span class="product-title">Leather Mens Slipper</span>
+                    </a>
+                    <span class="product-price">1 × £69.99</span>
+                </li>
+                <li class="aside-product-list-item">
+                    <a href="#/" class="remove">×</a>
+                    <a href="product-details.html">
+                        <img src="assets/images/shop/cart2.webp" width="68" height="84" alt="Image">
+                        <span class="product-title">Quickiin Mens shoes</span>
+                    </a>
+                    <span class="product-price">1 × £20.00</span>
+                </li>
+            </ul>
+            <p class="cart-total"><span>Subtotal:</span><span class="amount">£89.99</span></p>
+            <a class="btn-total" href="product-cart.html">View cart</a>
+            <a class="btn-total" href="product-checkout.html">Checkout</a>
+        </div>
+    </aside>
+    <!--== End Aside Cart ==-->
+
+    <!--== Start Aside Menu ==-->
+    <aside class="off-canvas-wrapper offcanvas offcanvas-start" tabindex="-1" id="AsideOffcanvasMenu"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h1 class="d-none" id="offcanvasExampleLabel">Aside Menu</h1>
+            <button class="btn-menu-close" data-bs-dismiss="offcanvas" aria-label="Close">menu <i
+                    class="fa fa-chevron-left"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="offcanvasNav" class="offcanvas-menu-nav">
+                <ul>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">home</a>
+                        <ul>
+                            <li><a href="index.html">Home One</a></li>
+                            <li><a href="index-two.html">Home Two</a></li>
+                        </ul>
+                    </li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="about-us.html">about</a>
+                    </li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">shop</a>
+                        <ul>
+                            <li><a href="#" class="offcanvas-nav-item">Shop Layout</a>
+                                <ul>
+                                    <li><a href="product.html">Shop 3 Column</a></li>
+                                    <li><a href="product-four-columns.html">Shop 4 Column</a></li>
+                                    <li><a href="product-left-sidebar.html">Shop Left Sidebar</a></li>
+                                    <li><a href="product-right-sidebar.html">Shop Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="offcanvas-nav-item">Single Product</a>
+                                <ul>
+                                    <li><a href="product-details-normal.html">Single Product Normal</a></li>
+                                    <li><a href="product-details.html">Single Product Variable</a></li>
+                                    <li><a href="product-details-group.html">Single Product Group</a></li>
+                                    <li><a href="product-details-affiliate.html">Single Product Affiliate</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="offcanvas-nav-item">Others Pages</a>
+                                <ul>
+                                    <li><a href="product-cart.html">Shopping Cart</a></li>
+                                    <li><a href="product-checkout.html">Checkout</a></li>
+                                    <li><a href="product-wishlist.html">Wishlist</a></li>
+                                    <li><a href="product-compare.html">Compare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">Blog</a>
+                        <ul>
+                            <li><a class="offcanvas-nav-item" href="#">Blog Layout</a>
+                                <ul>
+                                    <li><a href="blog.html">Blog Grid</a></li>
+                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">Pages</a>
+                        <ul>
+                            <li><a href="account-login.html">My Account</a></li>
+                            <li><a href="faq.html">Frequently Questions</a></li>
+                            <li><a href="page-not-found.html">Page Not Found</a></li>
+                        </ul>
+                    </li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <!--== End Aside Menu ==-->
+
+    </div>
+    <!--== Wrapper End ==-->
+
+    <!-- JS Vendor, Plugins & Activation Script Files -->
+
+    <!-- Vendors JS -->
+    <script src="./assets/js/vendor/modernizr-3.11.7.min.js"></script>
+    <script src="./assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="./assets/js/vendor/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugins JS -->
+    <script src="./assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="./assets/js/plugins/fancybox.min.js"></script>
+    <script src="./assets/js/plugins/jquery.nice-select.min.js"></script>
+
+    <!-- Custom Main JS -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210?text=Hello! I'm interested in your skincare services." class="whatsapp-float"
+        target="_blank" rel="noopener" title="Chat with us on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+</body>
+
+</html>
